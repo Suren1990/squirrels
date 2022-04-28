@@ -1,0 +1,35 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1114px;
+    width: 100%;
+    margin: 0 auto 153px;
+    padding: 30px 20px;
+}
+
+.header_logo {
+
+    a {
+        font-size: 24px;
+        line-height: 1.5em; //rem
+        font-weight: 700;
+        color: var(--white);
+        text-transform: uppercase;
+    }
+}
+
+.header_language_switch {
+    display: flex;
+    justify-content: flex-end;
+    width: 50%;
+
+    button {
+        max-width: 189px;
+        width: calc(50% - 16px);
+
+        & + button {
+            margin-left: 32px;
+        }
+    }
+}

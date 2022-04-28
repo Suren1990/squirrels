@@ -1,0 +1,106 @@
+.header_banner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1114px;
+    width: 100%;
+    margin: 0 auto 237px;
+    padding: 0 20px;
+}
+
+.header_banner_text {
+
+    h1 {
+        margin-bottom: 67px;
+        font-size: 56px;
+        line-height: 1.2em; //rem
+        font-weight: 700;
+        color: var(--white);
+        text-transform: uppercase;
+
+        p {
+            background: linear-gradient(45deg, #8B42AE 0%, #E12F47 53.08%, #E67011 100%);;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    }
+}
+
+.header_banner_subscribe {
+    display: flex;
+    align-items: flex-start;
+}
+
+.header_banner_input {
+    max-width: 300px;
+    width: 70%;
+
+    span {
+        display: block;
+        padding-left: 1.5em; //rem
+        font-size: 18px; //1rem
+        line-height: 1.22em; //rem
+        color: var(--red);
+        visibility: hidden;
+    }
+
+    input {
+        width: 100%;
+        height: 60px;
+        margin-bottom: 17px;
+        padding: 0 1.5em; //rem
+        font-size: 18px; //1rem
+        line-height: 1.22em; //rem;
+        color: var(--white);
+        background-color: transparent;
+        border: 1px solid var(--white);
+        border-radius: 30px;
+
+        &::placeholder,
+        &:-ms-input-placeholder {
+            color: #C7C8D0;
+        }
+
+        &:invalid {
+            border-color: var(--red);
+
+            & + span {
+                visibility: visible;
+            }
+        }
+    }
+}
+
+.btn_connect_wallet {
+    height: 60px;
+    margin-left: 32px;
+    padding: 0 1.55em; //rem
+    font-size: 18px; //1rem
+    line-height: 1.2em; //rem
+    color: var(--white);
+    background-color: var(--red);
+    border-radius: 30px;
+    border: none;
+}
+
+.header_banner_img {
+    position: relative;
+    max-width: 410px;
+    width: 40%;
+    max-height: 402px;
+    height: 402px;
+    margin-left: 32px;
+    background: linear-gradient(45deg, #8B42AE 0%, #E12F47 53.08%, #E67011 100%);
+    background-origin: border-box;
+    border: 6px solid transparent;
+    border-radius: 12px;
+    text-transform: uppercase;
+    box-shadow: inset 0 420px var(--black);
+
+    img {
+        display: block;
+        height: 100%;
+        margin: 0 auto;
+        object-fit: contain;
+    }
+}
