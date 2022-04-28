@@ -9,7 +9,7 @@ const Content = () => {
                 <p>the training</p>
             </h2>
 
-            <div className={styles.modules_wrap}>
+            <section className={styles.modules_wrap}>
 
                 <article className={styles.module}>
                     <div className={styles.module_text}>
@@ -87,7 +87,11 @@ const Content = () => {
                     </div>
                 </article>
 
-            </div>
+            </section>
+
+            <section className={styles.social_section}>
+                
+            </section>
 
         </section>
     );
