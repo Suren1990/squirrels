@@ -1,3 +1,5 @@
+//P.S. I lnow about clamp(min, calc, max) :), but i dont know do you use it.
+
 .content {
     max-width: 1114px;
     width: 100%;
@@ -46,6 +48,7 @@
         height: 100%;
         background-color: #B8008E;
         filter: blur(75px); //150px
+        border-radius: 50%;
     }
 
     &:before {
@@ -58,7 +61,7 @@
         width: 12vmin;
         max-height: 101px;
         height: 12vmin;
-        background: linear-gradient(183.92deg, rgba(254, 111, 147, 0.03) 4.35%, rgba(254, 111, 147, 0.6) 91.26%);
+        background: linear-gradient(183.92deg, rgba(254, 111, 147, 0.03) 4.35%, rgba(254, 111, 147, 0.9) 91.26%); //rgba(254, 111, 147, 0.6) 91.26%);
         // opacity: 0.8;
         box-shadow: inset 12.075px 12.075px 50.715px rgba(255, 255, 255, 0.5);
         border-radius: 50%;
@@ -93,6 +96,39 @@
         .module_text {
             order: 3;
             margin-left: 16px;
+        }
+    }
+}
+
+.module_with_blink {
+    position: relative;
+
+    .module_blink {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        max-width: 432px;
+        width: 32vmin;
+        max-height: 432px;
+        height: 32vmin;
+        background: linear-gradient(183.92deg, rgba(254, 111, 147, 0.03) 4.35%, rgba(254, 111, 147, 0.9) 91.26%); //rgba(254, 111, 147, 0.6) 91.26%);
+        // opacity: 0.8;
+        box-shadow: inset 19.2116px 19.2116px 80.6887px rgba(255, 255, 255, 0.5);
+        transform: rotate(149.01deg);
+        border-radius: 50%;
+
+        &:before {
+            content: "";
+            position: absolute;
+            top: -22%;
+            left: 26%;
+            max-width: 164px;
+            width: 18vmin;
+            max-height: 164px;
+            height: 18vmin;
+            background: #B8008E;
+            filter: blur(75px); //blur(150px)
+            border-radius: 50%;
         }
     }
 }
@@ -147,7 +183,7 @@
     max-width: 632px;
 
     p {
-        margin-top: 51px;
+        margin-top: 2.83em;
         font-size: 18px; //1rem
         line-height: 1.2em; //rem
         color: var(--gray);
@@ -157,8 +193,7 @@
 .social_module {
     display: flex;
     justify-content: space-between;
-    flex-wrap: wrap;
-    column-gap: 16px;
+    gap: 20px 16px;
 
     & + .social_module {
         margin-top: 146px;
@@ -170,9 +205,9 @@
     }
 
     &.twitter {
-        align-items: flex-end;
 
         .social_module_img {
+            margin-top: 6%;
             order: 2;
         }
     }
@@ -180,13 +215,24 @@
 }
 
 .social_module_img {
+    max-width: 189px;
+    width: 30%;
+}
 
-    img {
-        max-width: 189px;
-    }
+.social_module_text_wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 20px 16px;
+    width: 70%;
 }
 
 .social_module_text {
+
+    .youtube & {
+        max-width: 742px;
+        width: 70%;
+    }
 
     h4 {
         margin-bottom: 30px;
@@ -200,10 +246,6 @@
         font-size: 18px; //1rem
         line-height: 1.2em; //rem
         color: var(--white);
-
-        .youtube & {
-            max-width: 742px;
-        }
     }
 }
 
@@ -214,7 +256,7 @@
     }
 
     .modules_wrap {
-        margin-bottom: 17vmin;
+        margin-bottom: 16vmin;
     }
 
     .module {
@@ -236,6 +278,55 @@
         }
     }
 
+    .module_text_no_image {
+    
+        p {
+            font-size: 14px;
+        }
+    }
+
+    .social_module_img {
+        width: 18%;
+    }
+    
+    .social_module_text_wrap {
+        flex-wrap: wrap;
+        width: 82%;
+
+        .youtube &,
+        .discord & {
+            justify-content: flex-start;
+        }
+    }
+
+    .social_module_text {
+
+        h4 {
+            margin-bottom: 1.5em;
+            font-size: 14px; //1rem
+        }
+    
+        p {
+            font-size: 14px; //1rem
+        }
+    }
+
+    .social_module {
+    
+        & + .social_module {
+            margin-top: 10vmin;
+        }
+    }
+}
+
+@media screen and (max-width: 992px) {
+
+    .social_module_text_wrap {
+        
+        .twitter & {
+            justify-content: flex-start;
+        }
+    }
 }
 
 @media screen and (max-width: 768px) {
@@ -263,6 +354,27 @@
                 margin-left: 0;
             }
         }
+    }
+
+    .social_module {
+        flex-wrap: wrap;
+
+        &.twitter {
+
+            .social_module_img {
+                margin-top: 0;
+                order: 0;
+            }
+        }
+    }
+
+    .social_module_img {
+        max-width: 120px;
+        width: 100%;
+    }
+    
+    .social_module_text_wrap {
+        width: 100%;
     }
 
     .module_text:not(.module_text_no_image) {

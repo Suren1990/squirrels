@@ -1,3 +1,5 @@
+//P.S. I lnow about clamp(min, calc, max) :), but i dont know do you use it.
+
 .header_banner {
     display: flex;
     justify-content: space-between;
@@ -36,7 +38,7 @@
         width: 28vmin;
         max-height: 260px;
         height: 28vmin;
-        background: linear-gradient(183.92deg, rgba(254, 111, 147, 0.03) 4.35%, rgba(254, 111, 147, 0.6) 91.26%);
+        background: linear-gradient(183.92deg, rgba(254, 111, 147, 0.03) 4.35%, rgba(254, 111, 147, 0.9) 91.26%); //rgba(254, 111, 147, 0.6) 91.26%);
         //opacity: 0.8;
         box-shadow: inset 19.2116px 19.2116px 80.6887px rgba(255, 255, 255, 0.5);
         transform: rotate(149.01deg);
@@ -201,7 +203,7 @@
             width: 12vmin;
             max-height: 101px;
             height: 12vmin;
-            background: linear-gradient(183.92deg, rgba(254, 111, 147, 0.03) 4.35%, rgba(254, 111, 147, 0.6) 91.26%);
+            background: linear-gradient(183.92deg, rgba(254, 111, 147, 0.03) 4.35%, rgba(254, 111, 147, 0.9) 91.26%); //rgba(254, 111, 147, 0.6) 91.26%);
             // opacity: 0.8;
             box-shadow: inset 12.075px 12.075px 50.715px rgba(255, 255, 255, 0.5);
             border-radius: 50%;

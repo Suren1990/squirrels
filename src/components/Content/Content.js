@@ -12,7 +12,7 @@ const Content = () => {
                     welcome to
                     <p>the training</p>
                 </h2>
-                <span className={styles.content_blink}></span>
+                <div className={styles.content_blink}></div>
             </div>
 
             <section className={styles.modules_wrap}>
@@ -77,7 +77,7 @@ const Content = () => {
                     </div>
                 </article>
 
-                <article className={styles.module}>
+                <article className={`${styles.module} ${styles.module_with_blink}`}>
                     <div className={`${styles.module_text} ${styles.module_text_no_image}`}>
                         <h4>Module 7</h4>
                         <h3>Influencers</h3>
@@ -91,6 +91,7 @@ const Content = () => {
                             forget about the discord, because there you can find new friends,
                             which will help you in the future!</p>
                     </div>
+                    <div className={styles.module_blink}></div>
                 </article>
 
             </section>
@@ -102,20 +103,22 @@ const Content = () => {
                         <img src={discord} alt="discord" />
                     </div>
 
-                    <div className={styles.social_module_text}>
-                        <h4>Best free Discord alpha groups</h4>
+                    <div className={styles.social_module_text_wrap}>
+                        <div className={styles.social_module_text}>
+                            <h4>Best free Discord alpha groups</h4>
 
-                        <p>https://discord.gg/flur</p>
-                        <p>https://discord.gg/Nfc5YxUz</p>
-                        <p>http://discord.com/invite/SJeX7GQJbg</p>
-                    </div>
+                            <p>https://discord.gg/flur</p>
+                            <p>https://discord.gg/Nfc5YxUz</p>
+                            <p>http://discord.com/invite/SJeX7GQJbg</p>
+                        </div>
 
-                    <div className={styles.social_module_text}>
-                        <h4>Best paid Discord alpha groups</h4>
+                        <div className={styles.social_module_text}>
+                            <h4>Best paid Discord alpha groups</h4>
 
-                        <p>https://discord.gg/flur</p>
-                        <p>https://discord.gg/Nfc5YxUz</p>
-                        <p>http://discord.com/invite/SJeX7GQJbg</p>
+                            <p>https://discord.gg/flur</p>
+                            <p>https://discord.gg/Nfc5YxUz</p>
+                            <p>http://discord.com/invite/SJeX7GQJbg</p>
+                        </div>
                     </div>
 
                 </div>
@@ -125,39 +128,41 @@ const Content = () => {
                         <img src={twitter} alt="twitter" />
                     </div>
 
-                    <div className={styles.social_module_text}>
-                        <h4>Useful Twitter Influencers</h4>
+                    <div className={styles.social_module_text_wrap}>
+                        <div className={styles.social_module_text}>
+                            <h4>Useful Twitter Influencers</h4>
 
-                        <p>https://twitter.com/farokh</p>
-                        <p>https://twitter.com/takoa__</p>
-                        <p>https://twitter.com/ZssBecker</p>
-                        <p>https://twitter.com/NonFungies</p>
-                        <p>https://twitter.com/TheShamdoo</p>
-                        <p>https://twitter.com/allnick</p>
-                        <p>https://twitter.com/champtgram</p>
-                        <p>https://twitter.com/BAYC2745</p>
-                    </div>
+                            <p>https://twitter.com/farokh</p>
+                            <p>https://twitter.com/takoa__</p>
+                            <p>https://twitter.com/ZssBecker</p>
+                            <p>https://twitter.com/NonFungies</p>
+                            <p>https://twitter.com/TheShamdoo</p>
+                            <p>https://twitter.com/allnick</p>
+                            <p>https://twitter.com/champtgram</p>
+                            <p>https://twitter.com/BAYC2745</p>
+                        </div>
 
-                    <div className={styles.social_module_text}>
-                        <p>https://twitter.com/ryandcrypto</p>
-                        <p>https://twitter.com/PopeyesNFTs</p>
-                        <p>https://twitter.com/KosherPlug</p>
-                        <p>https://twitter.com/thebrettway</p>
-                        <p>https://twitter.com/JRNYcrypto</p>
-                        <p>https://twitter.com/AmeerHussainn</p>
-                        <p>https://twitter.com/Banks</p>
-                        <p>https://twitter.com/OttoSuwenNFT</p>
-                    </div>
+                        <div className={styles.social_module_text}>
+                            <p>https://twitter.com/ryandcrypto</p>
+                            <p>https://twitter.com/PopeyesNFTs</p>
+                            <p>https://twitter.com/KosherPlug</p>
+                            <p>https://twitter.com/thebrettway</p>
+                            <p>https://twitter.com/JRNYcrypto</p>
+                            <p>https://twitter.com/AmeerHussainn</p>
+                            <p>https://twitter.com/Banks</p>
+                            <p>https://twitter.com/OttoSuwenNFT</p>
+                        </div>
 
-                    <div className={styles.social_module_text}>
-                        <p>https://twitter.com/punk6529</p>
-                        <p>https://twitter.com/DonteCrypto</p>
-                        <p>https://twitter.com/flurnft</p>
-                        <p>https://twitter.com/Zeneca_33</p>
-                        <p>https://twitter.com/NFTLlama</p>
-                        <p>https://twitter.com/pranksy</p>
-                        <p>https://twitter.com/llamaverse_</p>
-                        <p>https://twitter.com/nftpasta</p>
+                        <div className={styles.social_module_text}>
+                            <p>https://twitter.com/punk6529</p>
+                            <p>https://twitter.com/DonteCrypto</p>
+                            <p>https://twitter.com/flurnft</p>
+                            <p>https://twitter.com/Zeneca_33</p>
+                            <p>https://twitter.com/NFTLlama</p>
+                            <p>https://twitter.com/pranksy</p>
+                            <p>https://twitter.com/llamaverse_</p>
+                            <p>https://twitter.com/nftpasta</p>
+                        </div>
                     </div>
 
                 </div>
@@ -167,19 +172,21 @@ const Content = () => {
                         <img src={youtube} alt="youtube" />
                     </div>
 
-                    <div className={styles.social_module_text}>
-                        <h4>NFT Influencers on YouTube</h4>
+                    <div className={styles.social_module_text_wrap}>
+                        <div className={styles.social_module_text}>
+                            <h4>NFT Influencers on YouTube</h4>
 
-                        <p>NFT Nate, ryandcrypto, Alex Becker’s Channel, Donte Walker NFT, The Bitcoin Express,
-                            NFT Times, Matt’s Crypto, Sajad, Crypto Brando, Champ Crypto, Popeyes Picks, Brett
-                            Malinowski, Sebastian Ghiorghiu</p>
+                            <p>NFT Nate, ryandcrypto, Alex Becker’s Channel, Donte Walker NFT, The Bitcoin Express,
+                                NFT Times, Matt’s Crypto, Sajad, Crypto Brando, Champ Crypto, Popeyes Picks, Brett
+                                Malinowski, Sebastian Ghiorghiu</p>
+                        </div>
                     </div>
 
                 </div>
 
             </section>
 
-        </section>
+        </section >
     );
 };
 

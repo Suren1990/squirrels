@@ -14,7 +14,7 @@ const Footer = () => {
                 <div className={styles.footer_inner}>
                     <div className={styles.footer_logo}>
                         <a>Logo</a>
-                    </div>
+                    </div> 
                     <div className={styles.footer_community}>
                         <h4>join the community</h4>
                         <div className={styles.social_community}>

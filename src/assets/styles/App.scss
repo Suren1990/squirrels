@@ -1,3 +1,5 @@
+//P.S. I lnow about clamp(min, calc, max) :), but i dont know do you use it.
+
 html {
     font-size: 18px; //1rem
 }
@@ -44,6 +46,18 @@ button {
     &.selected {
         box-shadow: none;
     }
+}
+
+@media screen and (max-width: 1280px) { 
+
+    html {
+        font-size: 14px; //1rem
+    }    
+
+    .main_inner {
+        margin-bottom: 14vmin;
+    }
+
 }
 
 @media screen and (max-width: 768px) { 
