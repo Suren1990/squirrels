@@ -3,6 +3,7 @@ html {
 }
 
 body {
+    height: 100vh;
     font-family: 'Noir Pro';
 }
 
@@ -20,10 +21,11 @@ button {
     flex-direction: column;
     width: 100%;
     background-color: var(--main-bg);
+    overflow-x: hidden;
 }
 
 .main_inner {
-    flex: 1 0 auto;
+    margin-bottom: 149px;
 }
 
 .main_btn {
@@ -42,4 +44,13 @@ button {
     &.selected {
         box-shadow: none;
     }
+}
+
+@media screen and (max-width: 768px) { 
+
+    .main_btn {
+        height: 32px;
+        font-size: 14px;
+    }
+
 }

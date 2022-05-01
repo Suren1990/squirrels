@@ -37,6 +37,7 @@ const HeaderBanner = () => {
             </div>
             <div className={styles.header_banner_img}>
                 <img src={BannerImage} alt="Squirrel" />
+                <span className={styles.header_banner_circle_bg}></span>
             </div>
         </section>
     );
