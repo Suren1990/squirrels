@@ -15,6 +15,14 @@
         background: url('../../assets/images/footer_img.png') no-repeat left 4% bottom / contain;
         z-index: 9;
     }
+
+    @media screen and (max-width: 1280px) {
+        padding-top: 10vmin;
+    }
+
+    @media screen and (max-width: 768px) {
+        padding-top: 0;
+    }
 }
 
 .footer_img {
@@ -43,6 +51,19 @@
         content: "";
         flex: 1 1 0;
     }
+
+    @media screen and (max-width: 1280px) {
+        padding: 5vmin 20px 5vmin;
+    }
+
+    @media screen and (max-width: 768px) {
+        flex-direction: column;
+        align-items: flex-end;
+
+        &:before {
+            display: none;
+        }
+    }
 }
 
 .footer_community {
@@ -70,6 +91,17 @@
         background-color: var(--red);
         border: none;
         border-radius: 30px;
+
+        @media screen and (max-width: 768px) {
+            height: 42px;
+            font-size: 16px;
+        }
+    }
+
+    @media screen and (max-width: 1280px) {
+        h4 {
+            font-size: calc(18px + (28 - 18) * ((100vw - 375px) / (1280 - 375)));
+        }
     }
 }
 
@@ -77,6 +109,10 @@
     display: flex;
     column-gap: 56px;
     margin-bottom: 40px;
+
+    @media screen and (max-width: 768px) {
+        column-gap: 32px;
+    }
 }
 
 .footer_logo {
@@ -88,6 +124,12 @@
         font-weight: 700;
         color: var(--white);
         text-transform: uppercase;
+    }
+
+    @media screen and (max-width: 1280px) {
+        a {
+            font-size: calc(28px + (56 - 28) * ((100vw - 375px) / (1280 - 375)));
+        }
     }
 }
 
@@ -101,62 +143,8 @@
     background-color: rgba(#fff, .5);
     text-align: center;
     z-index: 9;
-}
 
-@media screen and (max-width: 1280px) {
-
-    .footer {
-        padding-top: 10vmin;
-    }
-
-    .footer_inner {
-        padding: 5vmin 20px 5vmin;
-    }
-
-    .footer_logo {
-        
-        a {
-            font-size: calc(28px + (56 - 28) * ((100vw - 375px) / (1280 - 375)));
-        }
-    }
-
-    .footer_community {
-    
-        h4 {
-            font-size: calc(18px + (28 - 18) * ((100vw - 375px) / (1280 - 375)));
-        }
-
-    }    
-}
-
-@media screen and (max-width: 768px) {
-
-    .footer {
-        padding-top: 0;
-    }
-
-    .footer_inner {
-        flex-direction: column;
-        align-items: flex-end;
-
-        &:before {
-            display: none;
-        }
-    }
-
-    .footer_community {
-
-        .btn_join {
-            height: 42px;
-            font-size: 16px;
-        }
-    }
-
-    .social_community {
-        column-gap: 32px;
-    }
-
-    .footer_copyright {
+    @media screen and (max-width: 768px) {
         font-size: 16px;
     }
 }
