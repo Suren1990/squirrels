@@ -247,6 +247,7 @@
 
 .module_text_no_image {
     max-width: 632px;
+    z-index: 9;
 
     p {
         margin-top: 2.83em;
@@ -342,7 +343,6 @@
     }
 
     @media screen and (max-width: 768px) {
-        max-width: 120px;
         width: 100%;
     }
 }
