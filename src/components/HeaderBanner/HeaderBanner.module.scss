@@ -8,6 +8,14 @@
     width: 100%;
     margin: 0 auto 237px;
     padding: 0 20px;
+
+    @media screen and (max-width: 1280px) {
+        margin: 0 auto 20vmin;
+    }
+
+    @media screen and (max-width: 768px) {
+        flex-wrap: wrap;
+    }
 }
 
 .header_banner_text {
@@ -58,6 +66,15 @@
             background-clip: text;
             -webkit-text-fill-color: transparent;
         }
+
+        @media screen and (max-width: 1280px) {
+            font-size: calc(28px + (56 - 28) * ((100vw - 375px) / (1280 - 375)));
+        }
+
+    }
+
+    @media screen and (max-width: 768px) {
+        width: 100%;
     }
 }
 
@@ -104,6 +121,20 @@
             }
         }
     }
+
+    @media screen and (max-width: 768px) {
+
+        max-width: initial;
+
+        input {
+            height: 42px;
+            font-size: 16px;
+        }
+
+        span {
+            font-size: 16px;
+        }
+    }
 }
 
 .btn_connect_wallet {
@@ -116,6 +147,12 @@
     background-color: var(--red);
     border-radius: 30px;
     border: none;
+
+    @media screen and (max-width: 768px) {
+        height: 42px;
+        margin-left: 16px;
+        font-size: 16px;
+    }
 }
 
 .header_banner_img {
@@ -211,60 +248,14 @@
             z-index: 9;
         }
     }
-}
 
-@media screen and (max-width: 1280px) {
-
-    .header_banner {
-        margin: 0 auto 20vmin;
-    }
-
-    .header_banner_img {
+    @media screen and (max-width: 1280px) {
         height: 38vmin;
     }
 
-    .header_banner_text {
-
-        h1 {
-            font-size: calc(28px + (56 - 28) * ((100vw - 375px) / (1280 - 375)));
-        }
-    }
-
-}
-
-@media screen and (max-width: 768px) {
-
-    .header_banner {
-        flex-wrap: wrap;
-    }
-
-    .header_banner_text {
-        width: 100%;
-    }
-
-    .header_banner_input {
-        max-width: initial;
-
-        input {
-            height: 42px;
-            font-size: 16px;
-        }
-
-        span {
-            font-size: 16px;
-        }
-    }
-
-    .btn_connect_wallet {
-        height: 42px;
-        margin-left: 16px;
-        font-size: 16px;
-    }
-
-    .header_banner_img {
+    @media screen and (max-width: 768px) {
         width: auto;
         max-height: 230px;
         margin: 0 auto;
     }
-
 }
