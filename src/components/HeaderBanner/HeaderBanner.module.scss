@@ -1,0 +1,261 @@
+//P.S. I lnow about clamp(min, calc, max) :), but i dont know do you use it.
+
+.header_banner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1114px;
+    width: 100%;
+    margin: 0 auto 237px;
+    padding: 0 20px;
+
+    @media screen and (max-width: 1280px) {
+        margin: 0 auto 20vmin;
+    }
+
+    @media screen and (max-width: 768px) {
+        flex-wrap: wrap;
+    }
+}
+
+.header_banner_text {
+    position: relative;
+
+    &:before {
+        content: "";
+        position: absolute;
+        top: -12vmin;
+        left: -12vmin;
+        display: block;
+        max-width: 164px;
+        width: 18vmin;
+        max-height: 164px;
+        height: 18vmin;
+        background-color: #B8008E;
+        filter: blur(125px); //250px
+        border-radius: 50%;
+    }
+
+    &:after {
+        content: "";
+        position: absolute;
+        bottom: -10vh;
+        left: -60%;
+        display: block;
+        max-width: 260px;
+        width: 28vmin;
+        max-height: 260px;
+        height: 28vmin;
+        background: linear-gradient(183.92deg, rgba(254, 111, 147, 0.03) 4.35%, rgba(254, 111, 147, 0.9) 91.26%); //rgba(254, 111, 147, 0.6) 91.26%);
+        //opacity: 0.8;
+        box-shadow: inset 19.2116px 19.2116px 80.6887px rgba(255, 255, 255, 0.5);
+        transform: rotate(149.01deg);
+        border-radius: 50%;
+    }
+
+    h1 {
+        margin-bottom: 1.2em;
+        font-size: 56px;
+        line-height: 1.2em; //rem
+        font-weight: 700;
+        color: var(--white);
+        text-transform: uppercase;
+
+        p {
+            background: linear-gradient(45deg, #8B42AE 0%, #E12F47 53.08%, #E67011 100%);
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        @media screen and (max-width: 1280px) {
+            font-size: calc(28px + (56 - 28) * ((100vw - 375px) / (1280 - 375)));
+        }
+
+    }
+
+    @media screen and (max-width: 768px) {
+        width: 100%;
+    }
+}
+
+.header_banner_subscribe {
+    display: flex;
+    align-items: flex-start;
+}
+
+.header_banner_input {
+    max-width: 300px;
+    width: 70%;
+
+    span {
+        display: block;
+        padding-left: 1.5em; //rem
+        font-size: 18px; //1rem
+        line-height: 1.2em; //rem
+        color: var(--red);
+        visibility: hidden;
+    }
+
+    input {
+        width: 100%;
+        height: 60px;
+        margin-bottom: 17px;
+        padding: 0 1.5em; //rem
+        font-size: 18px; //1rem
+        line-height: 1.2em; //rem;
+        color: var(--white);
+        background-color: transparent;
+        border: 1px solid var(--white);
+        border-radius: 30px;
+
+        &::placeholder,
+        &:-ms-input-placeholder {
+            color: #C7C8D0;
+        }
+
+        &:invalid {
+            border-color: var(--red);
+
+            &+span {
+                visibility: visible;
+            }
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+
+        max-width: initial;
+
+        input {
+            height: 42px;
+            font-size: 16px;
+        }
+
+        span {
+            font-size: 16px;
+        }
+    }
+}
+
+.btn_connect_wallet {
+    height: 60px;
+    margin-left: 32px;
+    padding: 0 1.55em; //rem
+    font-size: 18px; //1rem
+    line-height: 1.2em; //rem
+    color: var(--white);
+    background-color: var(--red);
+    border-radius: 30px;
+    border: none;
+
+    @media screen and (max-width: 768px) {
+        height: 42px;
+        margin-left: 16px;
+        font-size: 16px;
+    }
+}
+
+.header_banner_img {
+    position: relative;
+    max-width: 410px;
+    width: 40%;
+    min-width: 250px;
+    max-height: 402px;
+    height: 42vmin;
+    min-height: 200px;
+    margin-left: 32px;
+    background: linear-gradient(45deg, #8B42AE 0%, #E12F47 53.08%, #E67011 100%);
+    background-origin: border-box;
+    border: 6px solid transparent;
+    border-radius: 12px;
+    text-transform: uppercase;
+    box-shadow: inset 0 420px var(--black);
+
+    &:before {
+        content: "";
+        position: absolute;
+        top: -6vmin;
+        left: -6vmin;
+        display: block;
+        max-width: 165px;
+        width: 12vmin;
+        max-height: 165px;
+        height: 12vmin;
+        background: linear-gradient(183.92deg, rgba(255, 0, 64, 0.03) 4.35%, rgba(255, 0, 202, 0.6) 91.26%);
+        border-radius: 50%;
+        //opacity: 0.8;
+        box-shadow: inset 12.075px 12.075px 50.715px rgba(255, 255, 255, 0.5);
+        transform: rotate(31deg);
+    }
+
+    &:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: var(--black);
+        border-radius: 6px;
+    }
+
+    img {
+        position: relative;
+        display: block;
+        height: 100%;
+        margin: 0 auto;
+        object-fit: contain;
+        z-index: 3;
+    }
+
+    .header_banner_circle_bg {
+        position: absolute;
+        right: -12vmin;
+        bottom: -5vmin;
+        max-width: 164px;
+        width: 18vmin;
+        max-height: 164px;
+        height: 18vmin;
+
+        &:before {
+            content: "";
+            position: absolute;
+            top: 20px;
+            left: 0;
+            display: block;
+            width: 100%;
+            height: 100%;
+            background-color: #B8008E;
+            filter: blur(125px); //250px
+            border-radius: 50%;
+        }
+
+        &:after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            display: block;
+            max-width: 101px;
+            width: 12vmin;
+            max-height: 101px;
+            height: 12vmin;
+            background: linear-gradient(183.92deg, rgba(254, 111, 147, 0.03) 4.35%, rgba(254, 111, 147, 0.9) 91.26%); //rgba(254, 111, 147, 0.6) 91.26%);
+            // opacity: 0.8;
+            box-shadow: inset 12.075px 12.075px 50.715px rgba(255, 255, 255, 0.5);
+            border-radius: 50%;
+            transform: rotate(31deg);
+            z-index: 9;
+        }
+    }
+
+    @media screen and (max-width: 1280px) {
+        height: 38vmin;
+    }
+
+    @media screen and (max-width: 768px) {
+        width: auto;
+        max-height: 230px;
+        margin: 0 auto;
+    }
+}

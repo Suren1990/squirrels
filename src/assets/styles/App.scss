@@ -1,0 +1,70 @@
+//P.S. I lnow about clamp(min, calc, max) :), but i dont know do you use it.
+
+html {
+    font-size: 18px; //1rem
+}
+
+body {
+    height: 100vh;
+    font-family: 'Noir Pro';
+}
+
+input {
+    box-sizing: border-box;
+}
+
+button {
+    font-family: 'Noir Pro';
+    cursor: pointer;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: var(--main-bg);
+    overflow-x: hidden;
+}
+
+.main_inner {
+    margin-bottom: 149px;
+}
+
+.main_btn {
+    height: 40px;
+    padding: 0 1em; //rem
+    font-size: 18px; //1rem
+    color: var(--white);
+    background: linear-gradient(45deg, #8B42AE 0%, #E12F47 53.08%, #E67011 100%);
+    background-origin: border-box;
+    border: 1px solid transparent;
+    border-radius: 20px;
+    text-transform: uppercase;
+    box-shadow: inset 0 40px var(--main-bg);
+
+    &:hover,
+    &.selected {
+        box-shadow: none;
+    }
+}
+
+@media screen and (max-width: 1280px) { 
+
+    html {
+        font-size: 16px; //1rem
+    }    
+
+    .main_inner {
+        margin-bottom: 14vmin;
+    }
+
+}
+
+@media screen and (max-width: 768px) { 
+
+    .main_btn {
+        height: 32px;
+        font-size: 16px;
+    }
+
+}

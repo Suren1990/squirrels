@@ -1,0 +1,54 @@
+//P.S. I lnow about clamp(min, calc, max) :), but i dont know do you use it.
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1114px;
+    width: 100%;
+    margin: 0 auto 153px;
+    padding: 30px 20px;
+
+    @media screen and (max-width: 1280px) {
+        margin: 0 auto 12vmin;
+    }
+
+    @media screen and (max-width: 768px) {
+        padding: 20px 20px;
+    }
+}
+
+.header_logo {
+    cursor: pointer;
+
+    a {
+        font-size: 24px;
+        line-height: 1.5em; //rem
+        font-weight: 700;
+        color: var(--white);
+        text-transform: uppercase;
+    }
+}
+
+.header_language_switch {
+    display: flex;
+    justify-content: flex-end;
+    min-width: 50%;
+
+    button {
+        max-width: 189px;
+        width: calc(50% - 16px);
+
+        &+button {
+            margin-left: 32px;
+        }
+
+        @media screen and (max-width: 768px) {
+            width: auto;
+
+            & + button {
+                margin-left: 16px;
+            }
+        }
+    }
+}
